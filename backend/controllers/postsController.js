@@ -62,7 +62,6 @@ const updatePost = async (req, res) => {
 const getAllPost = async (req, res) => {
     const username = req.query.user;
     const category = req.query.cat;
-    console.log(username, category);
     try {
         let posts;
         if (username) {
@@ -75,7 +74,7 @@ const getAllPost = async (req, res) => {
 
         res.status(200).json(posts);
     } catch (error) {
-        res.status(500).json(erro);
+        res.status(500).json(error);
     }
 };
 

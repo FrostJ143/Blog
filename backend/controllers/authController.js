@@ -11,10 +11,10 @@ const login = async (req, res) => {
                 const { password, ...other } = foundUser._doc;
                 return res.status(200).json(other);
             } else {
-                res.status(404).json({ message: "Email or password is wrong!" });
+                res.status(400).json({ message: "Email or password is wrong!" });
             }
         } else {
-            res.status(404).json({ message: "Email or password is wrong!" });
+            res.status(400).json({ message: "Email or password is wrong!" });
         }
     } catch (error) {
         res.status(500).json(error);
