@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-size: cover;
     padding: 20px;
     align-items: center;
@@ -44,7 +45,7 @@
 }
 
 .loginRegisterButton {
-    position:absolute;
+    position: absolute;
     top: 20px;
     right: 20px;
     border: none;
@@ -53,4 +54,9 @@
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
+}
+
+.loginButton:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
 }

@@ -36,7 +36,7 @@ const deletePost = async (req, res) => {
             await Post.findByIdAndDelete(req.params.id).exec();
             res.status(200).json({ message: "Delete post successfully!" });
         } else {
-            res.status(404).json({ message: "You are not the owner the post!" });
+            res.status(401).json({ message: "You are not the owner the post!" });
         }
     } catch (error) {
         res.status(500).json(error);
